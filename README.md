@@ -1,4 +1,4 @@
-# Backend CRUD API Assignments
+# Backend Assignments
 
 This repository contains my backend development assignments, where I built and improved a **Task Management REST API** using FastAPI.
 
