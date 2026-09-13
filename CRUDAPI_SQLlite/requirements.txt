@@ -1,0 +1,3 @@
+fastapi
+uvicorn[standard]
+python==3.14
