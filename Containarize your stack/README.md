@@ -126,15 +126,7 @@ Database configuration is loaded from environment variables.
 
 The real `.env` file is intentionally excluded from version control.
 
-### `.env`
-
 The local `.env` file should contain the actual database connection information.
-
-Example structure:
-
-```env
-DATABASE_URL=postgresql://<username>:<password>@db:5432/<database_name>
-```
 
 The values shown above are placeholders only.
 
@@ -153,23 +145,12 @@ No real credentials should be placed in this file.
 The following sensitive/local files should be ignored:
 
 ```gitignore
-.env
-venv/
-__pycache__/
-*.pyc
-```
 
 **Important:** Never commit real database passwords, API keys, access tokens, or other secrets to GitHub.
-
----
 
 ## Database Schema
 
 The database schema is defined in:
-
-```text
-schema.sql
-```
 
 The SQL file is responsible for creating the required database table.
 
