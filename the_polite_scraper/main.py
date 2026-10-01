@@ -141,10 +141,7 @@ for page_number in range(1, PAGES_TO_SCRAPE + 1):
             "error": str(e)
         })
 
-
-# --------------------------------------------------
 # Save books
-# --------------------------------------------------
 
 with open("book.json", "w", encoding="utf-8") as file:
     json.dump(
@@ -155,9 +152,7 @@ with open("book.json", "w", encoding="utf-8") as file:
     )
 
 
-# --------------------------------------------------
 # Validate JSON against schema
-# --------------------------------------------------
 
 schema_validation = "passed"
 
@@ -181,9 +176,7 @@ except Exception as e:
     })
 
 
-# --------------------------------------------------
 # Save errors
-# --------------------------------------------------
 
 with open("error.json", "w", encoding="utf-8") as file:
 
@@ -197,9 +190,7 @@ with open("error.json", "w", encoding="utf-8") as file:
     )
 
 
-# --------------------------------------------------
 # Create run report
-# --------------------------------------------------
 
 end_time = datetime.now().isoformat()
 
@@ -223,10 +214,7 @@ with open("run_report.json", "w", encoding="utf-8") as file:
     )
 
 
-# --------------------------------------------------
 # Final output
-# --------------------------------------------------
-
 print("\n-----------------------------")
 print("Scraping completed")
 print("-----------------------------")
