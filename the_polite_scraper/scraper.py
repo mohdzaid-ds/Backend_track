@@ -8,9 +8,7 @@ from urllib.robotparser import RobotFileParser
 from jsonschema import validate
 
 
-# -------------------------
 # Website configuration
-# -------------------------
 
 base_url = "https://books.toscrape.com/catalogue/page-{}.html"
 
@@ -20,26 +18,19 @@ pages = [
     base_url.format(3)
 ]
 
-
-# -------------------------
 # Identify the scraper
-# -------------------------
 
 headers = {
     "User-Agent": "BookScraper/1.0"
 }
 
 
-# -------------------------
 # Store scraped books
-# -------------------------
 
 books_data = []
 
 
-# -------------------------
 # Check robots.txt
-# -------------------------
 
 robots_url = "https://books.toscrape.com/robots.txt"
 
@@ -87,9 +78,7 @@ print(
 )
 
 
-# -------------------------
 # Scrape each page
-# -------------------------
 
 for page_url in pages:
 
@@ -128,9 +117,7 @@ for page_url in pages:
         continue
 
 
-    # -------------------------
     # Parse HTML
-    # -------------------------
 
     soup = BeautifulSoup(
         response.text,
@@ -150,17 +137,16 @@ for page_url in pages:
     )
 
 
-    # -------------------------
+    
     # Process each book
-    # -------------------------
 
     for book in books:
 
         try:
 
-            # -------------------------
+            
             # Title
-            # -------------------------
+            
 
             title_element = book.find("h3")
 
@@ -184,9 +170,7 @@ for page_url in pages:
                 continue
 
 
-            # -------------------------
             # Book URL
-            # -------------------------
 
             href = title_element.a.get("href")
 
@@ -207,9 +191,9 @@ for page_url in pages:
             )
 
 
-            # -------------------------
+            
             # Price
-            # -------------------------
+            
 
             price_element = book.find(
                 "p",
@@ -255,9 +239,8 @@ for page_url in pages:
             )
 
 
-            # -------------------------
             # Availability
-            # -------------------------
+        
 
             availability_element = book.find(
                 "p",
@@ -279,10 +262,7 @@ for page_url in pages:
                 strip=True
             )
 
-
-            # -------------------------
             # Store book
-            # -------------------------
 
             books_data.append({
                 "title": title,
@@ -325,19 +305,14 @@ for page_url in pages:
             continue
 
 
-# -------------------------
 # Final book count
-# -------------------------
 
 print(
     "\nTotal books collected:",
     len(books_data)
 )
 
-
-# -------------------------
 # Save data to JSON
-# -------------------------
 
 with open(
     "books.json",
@@ -357,10 +332,7 @@ print(
     "Data saved to books.json"
 )
 
-
-# -------------------------
 # Read JSON file
-# -------------------------
 
 with open(
     "books.json",
@@ -377,9 +349,7 @@ print(
 )
 
 
-# -------------------------
 # Load JSON Schema
-# -------------------------
 
 try:
 
@@ -403,9 +373,7 @@ except (FileNotFoundError, json.JSONDecodeError) as e:
     )
 
 
-# -------------------------
 # Validate JSON Schema
-# -------------------------
 
 try:
 
