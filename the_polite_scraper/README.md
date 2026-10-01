@@ -119,57 +119,6 @@ Each scraper execution produces a structured report:
 ```text
 output/run-report.json
 ```
-## Clone the Repository
-
-Clone the project from GitHub:
-
-```bash
-git clone https://github.com/your-username/polite-scraper.git
-cd polite-scraper
-```
-
-Replace:
-
-```text
-your-username
-```
-
-with your actual GitHub username.
-
-## Create a Virtual Environment
-
-Windows PowerShell:
-
-```powershell
-python -m venv venv
-```
-
-Activate the environment:
-
-```powershell
-.\venv\Scripts\Activate.ps1
-```
-
-## Install Dependencies
-
-```powershell
-pip install -r requirements.txt
-```
-
-## Run the Scraper
-
-```powershell
-python src/main.py
-```
-
-## Output
-
-After a successful run, the following files will be generated:
-
-```text
-output/
-├── books.json
-```
 
 The report records information about the execution, such as:
 
@@ -216,6 +165,8 @@ polite_scraper/
 │
 ├── output/
 │   ├── books.json
+│   ├── errors.json
+│   └── run-report.json
 │
 ├── .gitignore
 └── README.md
@@ -257,6 +208,8 @@ A successful run should produce:
 ```text
 output/
 ├── books.json
+├── errors.json
+└── run-report.json
 ```
 
 The main output should contain **60 unique book records** from the first three catalogue pages.
@@ -303,4 +256,3 @@ The project demonstrates the following scraping concepts:
 * Run reporting
 * Idempotent processing
 * Responsible scraping practices
-
