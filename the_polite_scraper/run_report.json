@@ -1,0 +1,9 @@
+{
+    "status": "completed_with_errors",
+    "started_at": "2026-10-01T11:31:03.597549",
+    "completed_at": "2026-10-01T11:31:09.929888",
+    "pages_requested": 3,
+    "books_scraped": 60,
+    "errors": 1,
+    "schema_validation": "failed"
+}
