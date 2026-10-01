@@ -169,16 +169,7 @@ After a successful run, the following files will be generated:
 ```text
 output/
 ├── books.json
-├── errors.json
-└── run-report.json
 ```
-
-
-
-
-
-
-
 
 The report records information about the execution, such as:
 
@@ -225,8 +216,6 @@ polite_scraper/
 │
 ├── output/
 │   ├── books.json
-│   ├── errors.json
-│   └── run-report.json
 │
 ├── .gitignore
 └── README.md
@@ -268,8 +257,6 @@ A successful run should produce:
 ```text
 output/
 ├── books.json
-├── errors.json
-└── run-report.json
 ```
 
 The main output should contain **60 unique book records** from the first three catalogue pages.
