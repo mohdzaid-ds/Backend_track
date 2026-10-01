@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Books Schema",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "title": {
+                "type": "string"
+            },
+            "url": {
+                "type": "string"
+            },
+            "price": {
+                "type": "number"
+            },
+            "availability": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "title",
+            "url",
+            "price",
+            "availability"
+        ],
+        "additionalProperties": false
+    }
+}
