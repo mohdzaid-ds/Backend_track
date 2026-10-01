@@ -1,0 +1,8 @@
+{
+    "errors": [
+        {
+            "type": "schema_validation",
+            "error": "[Errno 2] No such file or directory: 'schema.json'"
+        }
+    ]
+}
