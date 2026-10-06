@@ -1,104 +1,59 @@
-# Backend Assignments
+Backend Engineering Track
 
-This repository contains my backend development assignments, where I built and improved a **Task Management REST API** using FastAPI.
+A hands-on backend engineering track focused on building practical backend systems with Python, FastAPI, REST APIs, databases, authentication, Docker, PostgreSQL, and data processing.
 
-The project was completed in two stages: first building CRUD operations using in-memory data, and then integrating a SQLite database for persistent data storage.
+This repository contains my assignments and projects completed while developing backend engineering skills as part of my AI Engineering Backend Track.
 
-## 📌 Assignments
+The projects are organized to show my progression from building basic APIs to working with databases, authentication, containerization, and automated data collection.
 
-### 1. CRUD API Without Database
+🎯 Purpose
 
-Built a basic **Task Management API** using FastAPI.
+The main objective of this track is to develop a strong foundation in backend engineering and understand how different backend components work together in real applications.
 
-The tasks were initially stored in a Python list, allowing me to understand the fundamentals of:
+Throughout the track, I worked with:
 
-* REST APIs
-* HTTP methods
-* CRUD operations
-* API endpoints
-* Request and response handling
+REST API development
 
-### 2. CRUD API With SQLite Database
+CRUD operations
 
-Extended the previous API by integrating a **SQLite database**.
+Database integration
 
-Tasks are now stored permanently in a `task.db` database instead of a temporary Python list.
+SQLite
 
-This assignment helped me learn:
+PostgreSQL
 
-* SQLite
-* SQL queries
-* Database tables
-* CRUD operations with a database
-* Connecting FastAPI with SQLite
-* Persistent data storage
+Authentication
 
-## 🛠️ Technologies
+JWT-based authorization
 
-* Python
-* FastAPI
-* Uvicorn
-* SQLite
-* SQL
-* Git & GitHub
-* VS Code
+Docker
 
-## 📂 Project Structure
+Docker Compose
 
-```text
-backend-assignments/
+Web scraping
+
+Data validation
+
+Git and GitHub
+
+Backend debugging and troubleshooting
+
+📂 Repository Structure
+
+Backend_track/
 │
-├── main.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-├── task.db
+├── CRUD_API/
 │
-└── screenshots/
-    ├── get-tasks.png
-    ├── post-task.png
-    ├── update-task.png
-    └── delete-task.png
-```
+├── CRUDAPI_SQLlite/
+│
+├── Containarize your stack/
+│
+├── Auth_login/
+│
+├── the_polite_scraper/
+│
+├── LICENSE
+│
+└── README.md
 
-## 🚀 How to Run
-
-Create a virtual environment:
-
-```bash
-python -m venv venv
-```
-
-Activate it on Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the FastAPI application:
-
-```bash
-uvicorn main:app --reload
-```
-
-Open the interactive API documentation:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-## 📚 Learning Outcome
-
-These assignments helped me understand the progression from a **basic in-memory CRUD API** to a **database-backed REST API** using FastAPI and SQLite.
-
-## 👨‍💻 Author
-
-**Mohd Zaid**
-
-Aspiring AI/ML Engineer | Backend AI Engineering
+Each directory represents a separate assignment or stage of the backend track.
