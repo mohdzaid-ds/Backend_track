@@ -1,0 +1,10 @@
+from sqlalchemy import Column, Integer, String
+from app.database.connection import Base
+
+
+class CustomerPlan(Base):
+    __tablename__ = "customer_plans"
+
+    id = Column(Integer, primary_key=True, index=True)
+    customer_id = Column(String, unique=True, nullable=False, index=True)
+    plan_name = Column(String, nullable=False, default="free")
